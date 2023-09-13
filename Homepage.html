@@ -19,8 +19,16 @@
             background-color: #007BFF;
             color: #fff;
             padding: 20px;
-            width: 30%; /* Adjust this to your preferred width */
+            width: 20%; /* Adjust this to your preferred width */
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         img {
             /* Set the maximum width to 100% for responsiveness */
@@ -49,13 +57,16 @@
             background-color: #0056b3;
             color: #fff;
         }
+        .content {
+            margin-left: 25%; /* Adjust this value to create space for the left panel */
+        }
     </style>
 </head>
 <body>
-    <!-- Left panel containing picture and name -->
+    <!-- Left panel containing picture, name, and navigation menu -->
     <div class="left-panel">
         <!-- Replace 'your_image_path.jpg' with the actual path to your profile picture -->
-        <img src="your_image_path.jpg" alt="Your Name's Profile Picture">
+        <img src="docs/assets/images/sadie5.jpg" alt="Your Name's Profile Picture">
         <h2>Your Name</h2>
         <p>Web Developer</p>
         <!-- Navigation menu with tabs -->
