@@ -18,9 +18,13 @@
             color: #6B7A8E; /* Blue-grey text color */
             width: 15%; /* Width of the Control Panel */
             height: 100vh;
-            text-align: left;
+            text-align: center; /* Center content horizontally */
             padding: 20px;
             border: 2px solid red; /* Red border around the Control Panel */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .profile-group {
             border: 2px solid orange; /* Orange border around the profile group */
@@ -28,8 +32,9 @@
             border-radius: 10px; /* Rounded corners for the border */
         }
         .control-panel img {
-            max-width: 100%;
-            border-radius: 50%;
+            width: 200px; /* Make the image square by setting both width and height */
+            height: 200px;
+            border-radius: 10px; /* Rounded corners for the image */
             margin-bottom: 20px;
         }
         .control-panel h2, .control-panel p {
