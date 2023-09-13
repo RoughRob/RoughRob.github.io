@@ -24,7 +24,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            text-align: center;
+            text-align: left; /* Align content to the left */
             display: flex;
             flex-direction: column;
             justify-content: flex-start; /* Move content to the top */
@@ -42,9 +42,10 @@
         .nav-menu {
             list-style-type: none;
             padding: 0;
+            text-align: left; /* Align tabs to the left */
         }
         .nav-menu li {
-            margin-bottom: 10px;
+            margin-bottom: 15px; /* Increase vertical space between tabs */
         }
         .nav-menu a {
             text-decoration: none;
@@ -52,6 +53,7 @@
             padding: 5px 10px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            font-size: 18px; /* Increase text size */
         }
         .nav-menu a:hover {
             background-color: #0056b3;
@@ -72,6 +74,8 @@
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li> <!-- Added Portfolio tab -->
+            <li><a href="resume.html">Resume</a></li> <!-- Added Resume tab -->
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
