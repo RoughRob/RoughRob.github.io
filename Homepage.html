@@ -22,6 +22,11 @@
             padding: 20px;
             border: 2px solid red; /* Red border around the Control Panel */
         }
+        .profile-group {
+            border: 2px solid orange; /* Orange border around the profile group */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners for the border */
+        }
         .control-panel img {
             max-width: 100%;
             border-radius: 50%;
@@ -56,10 +61,13 @@
 <body>
     <!-- Control Panel on the left -->
     <div class="control-panel">
-        <!-- Replace 'your_image_path.jpg' with the actual path to your profile picture -->
-        <img src="your_image_path.jpg" alt="Your Name's Profile Picture">
-        <h2>Your Name</h2>
-        <p>Web Developer</p>
+        <!-- Profile Group with orange border -->
+        <div class="profile-group">
+            <!-- Replace 'your_image_path.jpg' with the actual path to your profile picture -->
+            <img src="your_image_path.jpg" alt="Your Name's Profile Picture">
+            <h2>Your Name</h2>
+            <p>Web Developer</p>
+        </div>
         <!-- Navigation menu with tabs -->
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
