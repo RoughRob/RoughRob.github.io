@@ -23,27 +23,28 @@
             border: 2px solid red; /* Red border around the Control Panel */
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
         }
         .profile-group {
             border: 2px solid orange; /* Orange border around the profile group */
             padding: 20px;
             border-radius: 10px; /* Rounded corners for the border */
+            margin-bottom: 20px;
+            align-self: flex-start; /* Centered at the top */
         }
-        .control-panel img {
+        .profile-group img {
             width: 200px; /* Make the image square by setting both width and height */
             height: 200px;
             border-radius: 10px; /* Rounded corners for the image */
-            margin-bottom: 20px;
         }
-        .control-panel h2, .control-panel p {
+        .profile-group h2, .profile-group p {
             margin: 0;
         }
         .nav-menu-group {
             border: 2px solid green; /* Green border around the tabs group */
             padding: 20px;
             border-radius: 10px; /* Rounded corners for the border */
+            align-self: flex-start; /* Middle left */
         }
         .nav-menu {
             list-style-type: none;
@@ -71,14 +72,14 @@
 <body>
     <!-- Control Panel on the left -->
     <div class="control-panel">
-        <!-- Profile Group with orange border -->
+        <!-- Profile Group with orange border (centered at the top) -->
         <div class="profile-group">
             <!-- Replace 'your_image_path.jpg' with the actual path to your profile picture -->
             <img src="your_image_path.jpg" alt="Your Name's Profile Picture">
             <h2>Your Name</h2>
             <p>Web Developer</p>
         </div>
-        <!-- Tabs Group with green border -->
+        <!-- Tabs Group with green border (middle left) -->
         <div class="nav-menu-group">
             <!-- Navigation menu with tabs -->
             <ul class="nav-menu">
