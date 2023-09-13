@@ -35,6 +35,11 @@
         .control-panel h2, .control-panel p {
             margin: 0;
         }
+        .nav-menu-group {
+            border: 2px solid green; /* Green border around the tabs group */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners for the border */
+        }
         .nav-menu {
             list-style-type: none;
             padding: 0;
@@ -68,14 +73,17 @@
             <h2>Your Name</h2>
             <p>Web Developer</p>
         </div>
-        <!-- Navigation menu with tabs -->
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li> <!-- Added Portfolio tab -->
-            <li><a href="resume.html">Resume</a></li> <!-- Added Resume tab -->
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <!-- Tabs Group with green border -->
+        <div class="nav-menu-group">
+            <!-- Navigation menu with tabs -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li> <!-- Added Portfolio tab -->
+                <li><a href="resume.html">Resume</a></li> <!-- Added Resume tab -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </div>
 
     <!-- Content on the right side (customize as needed) -->
