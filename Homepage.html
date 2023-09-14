@@ -29,25 +29,11 @@
             margin-bottom: 20px;
             align-self: flex-start; /* Centered at the top */
         }
-        .profile-container {
-            position: relative; /* Enable positioning for the profile elements */
-        }
-        .profile-circle {
-            width: 240px; /* Adjust the size of the circle to border the image */
-            height: 240px; /* Adjust the size of the circle to border the image */
-            background-color: #fff; /* White background for the circle */
-            border-radius: 50%; /* Create a circular shape for the circle */
-            position: absolute; /* Position it relative to the profile-container */
-            top: -20px; /* Adjust the position to border the image */
-            left: -20px; /* Adjust the position to border the image */
-            z-index: -1; /* Place the circle behind the profile image */
-        }
         .profile-group img {
-            width: 200px; /* Adjust the size of the profile image */
-            height: 200px; /* Adjust the size of the profile image */
+            width: 200px; /* Make the image square by setting both width and height */
+            height: 200px; /* Adjust the size as needed to make it square */
             border-radius: 50%; /* Create a circular shape for the image */
-            position: relative; /* Ensure the image is within the stacking context */
-            z-index: 1; /* Place the image above the circular background */
+            border: 2px solid #fff; /* Add a white border around the image */
         }
         .profile-group h2, .profile-group p {
             margin: 0;
@@ -85,13 +71,8 @@
     <div class="control-panel">
         <!-- Profile Group (centered at the top) -->
         <div class="profile-group">
-            <!-- Profile Container -->
-            <div class="profile-container">
-                <!-- Circular Background -->
-                <div class="profile-circle"></div>
-                <!-- Replace 'your_image_path.jpg' with the actual path to your square profile picture -->
-                <img src="docs/assets/images/sadie5.jpg" alt="Your Name's Profile Picture">
-            </div>
+            <!-- Replace 'your_image_path.jpg' with the actual path to your square profile picture -->
+            <img src="docs/assets/images/sadie5.jpg" alt="Your Name's Profile Picture">
             <h2>Your Name</h2>
             <p>Web Developer</p>
         </div>
