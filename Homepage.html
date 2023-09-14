@@ -26,14 +26,24 @@
         }
         .profile-group {
             padding: 20px;
-            border-radius: 10px; /* Rounded corners for the border */
             margin-bottom: 20px;
             align-self: flex-start; /* Centered at the top */
+            position: relative; /* Enable positioning for the background circle */
+        }
+        .profile-circle {
+            width: 220px; /* Adjust the size of the circle */
+            height: 220px; /* Adjust the size of the circle */
+            background-color: #fff; /* White background for the circle */
+            border-radius: 50%; /* Create a circular shape for the circle */
+            position: absolute; /* Position it relative to the profile-group */
+            top: -10px; /* Adjust the position to overlap with the image */
+            left: -10px; /* Adjust the position to overlap with the image */
         }
         .profile-group img {
             width: 200px; /* Make the image square by setting both width and height */
             height: 200px; /* Adjust the size as needed to make it square */
-            border-radius: 10px; /* Rounded corners for the image */
+            border-radius: 50%; /* Create a circular shape for the image */
+            z-index: 1; /* Place the image above the background circle */
         }
         .profile-group h2, .profile-group p {
             margin: 0;
@@ -71,6 +81,8 @@
     <div class="control-panel">
         <!-- Profile Group (centered at the top) -->
         <div class="profile-group">
+            <!-- Circular Background -->
+            <div class="profile-circle"></div>
             <!-- Replace 'your_image_path.jpg' with the actual path to your square profile picture -->
             <img src="your_image_path.jpg" alt="Your Name's Profile Picture">
             <h2>Your Name</h2>
