@@ -94,6 +94,36 @@
             text-align: left; /* Left-align the section content */
 			padding-left: 120px;
         }
+		
+				/* Style the About Me section content */
+		.about-content {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		/* Style the picture on the left */
+		.about-picture {
+			flex: 1; /* Takes up half of the space */
+			padding: 20px;
+		}
+
+		.about-picture img {
+			max-width: 100%; /* Ensure the image fits within its container */
+			height: auto;
+			display: block; /* Remove extra spacing below the image */
+		}
+
+		/* Style the bulleted list on the right */
+		.about-list {
+			flex: 1; /* Takes up half of the space */
+			padding: 20px;
+		}
+
+		.about-list ul {
+			list-style-type: disc; /* Use bullets for list items */
+			padding-left: 20px; /* Add some left padding for bullets */
+		}
 
         /* Add this CSS to style the background image for the homepage section */
         #home {
@@ -102,6 +132,7 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+		
     </style>
 </head>
 <body>
@@ -134,11 +165,25 @@
             <h2>Welcome to My Homepage</h2>
             <p>This is the home section. You can customize the content here.</p>
         </div>
-        <!-- Section 2 -->
-        <div class="section" id="about">
-            <h2>About Me</h2>
-            <p>This is the about section. You can provide information about yourself here.</p>
-        </div>
+		<!-- Section 2 - About Me -->
+		<div class="section" id="about">
+			<h2>About Me</h2>
+			<div class="about-content">
+				<!-- Left: Picture -->
+				<div class="about-picture">
+					<img src="your_about_image.jpg" alt="About Me Image">
+				</div>
+				<!-- Right: Bulleted List -->
+				<div class="about-list">
+					<ul>
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+						<!-- Add more items as needed -->
+					</ul>
+				</div>
+			</div>
+		</div>
         <!-- Section 3 -->
         <div class="section" id="portfolio">
             <h2>Portfolio</h2>
