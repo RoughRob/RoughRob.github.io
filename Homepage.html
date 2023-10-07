@@ -68,7 +68,16 @@
             background-color: #333; /* A slightly darker gray for hover */
             color: #fff; /* Keep the text color white on hover */
         }
-
+		
+        .content {
+            flex: 1;
+            padding-left: 15%; /* Add left padding to create space for the fixed panel */
+            position: relative; /* Relative positioning for text overlay */
+            overflow: hidden; /* Hide overflow to prevent scrollbars */
+            display: flex;
+            flex-direction: column;
+            z-index: 1; /* Ensure content appears under the control panel */
+        } 
         .section {
             min-height: 100vh; /* Each section takes up the full viewport height */
             padding: 20px;
