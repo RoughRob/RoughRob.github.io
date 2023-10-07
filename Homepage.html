@@ -56,7 +56,7 @@
             padding: 0;
         }
         .nav-menu li {
-            margin-bottom: 25px; /* Increase vertical spacing between the navigation menu items */
+            margin-bottom: 15px; /* Increase vertical spacing between the navigation menu items */
             text-align: left; /* Left-align the navigation menu items */
         }
         .nav-menu a {
@@ -75,29 +75,20 @@
             padding: 0; /* Remove padding to fill the entire space */
             position: relative; /* Relative positioning for text overlay */
             overflow: hidden; /* Hide overflow to prevent scrollbars */
+            display: flex;
+            flex-direction: column;
         }
-        .content-image {
-            width: 100%; /* Image takes up the entire width of the content section */
-            height: auto; /* Maintain aspect ratio */
-            position: absolute; /* Absolute positioning for the image */
-            top: 0;
-            left: 0;
-            background-color: #1A1A1A; /* Background color matching the charcoal gray color */
-        }
-        .content-image img {
-            width: 100%; /* Make the image fit within its container */
-            height: auto; /* Maintain aspect ratio */
-        }
-        .content-text {
-            position: absolute; /* Absolute positioning for the text overlay */
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Center both vertically and horizontally */
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for text */
-            color: #fff; /* White text color */
+        .section {
+            min-height: 100vh; /* Each section takes up the full viewport height */
             padding: 20px;
-            max-width: 80%; /* Limit the width of the text */
             text-align: center;
+        }
+        .section h2 {
+            font-size: 36px; /* Increase text size for section headings */
+            margin: 20px 0; /* Add vertical spacing around headings */
+        }
+        .section p {
+            font-size: 24px; /* Increase text size for section content */
         }
     </style>
 </head>
@@ -115,24 +106,41 @@
         <div class="nav-menu-group">
             <!-- Navigation menu with tabs -->
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li> <!-- Added Portfolio tab -->
-                <li><a href="resume.html">Resume</a></li> <!-- Added Resume tab -->
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li> <!-- Added Portfolio tab -->
+                <li><a href="#resume">Resume</a></li> <!-- Added Resume tab -->
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
 
     <!-- Content on the right side (customize as needed) -->
     <div class="content">
-        <div class="content-image">
-            <!-- Replace 'your_large_image.gif' with the actual path to your large image or GIF -->
-            <img src="docs/assets/images/temple.PNG" alt="Large GIF">
+        <!-- Section 1 -->
+        <div class="section" id="home">
+            <h2>Welcome to My Homepage</h2>
+            <p>This is the home section. You can customize the content here.</p>
         </div>
-        <div class="content-text">
-            <h1>Welcome to My Homepage</h1>
-            <p>This is where you can showcase your content or provide information about yourself. You can add text and other elements here.</p>
+        <!-- Section 2 -->
+        <div class="section" id="about">
+            <h2>About Me</h2>
+            <p>This is the about section. You can provide information about yourself here.</p>
+        </div>
+        <!-- Section 3 -->
+        <div class="section" id="portfolio">
+            <h2>Portfolio</h2>
+            <p>This is the portfolio section. You can showcase your work here.</p>
+        </div>
+        <!-- Section 4 -->
+        <div class="section" id="resume">
+            <h2>Resume</h2>
+            <p>This is the resume section. You can display your resume or CV here.</p>
+        </div>
+        <!-- Section 5 -->
+        <div class="section" id="contact">
+            <h2>Contact</h2>
+            <p>This is the contact section. You can provide contact information or a contact form here.</p>
         </div>
     </div>
 </body>
