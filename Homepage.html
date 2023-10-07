@@ -15,7 +15,7 @@
         }
         .control-panel {
             background-color: #c7392a; /* Orange-red background */
-            color: #C7872A; /* Light gray text color for contrast */
+            color: #fff; /* Pure white text color for contrast */
             width: 15%; /* Width of the Control Panel */
             height: 100vh;
             text-align: center; /* Center content horizontally */
@@ -23,6 +23,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+            position: relative; /* Add relative positioning */
+            z-index: 1; /* Place the panel above the content */
         }
         .profile-group {
             padding: 20px;
@@ -33,7 +36,7 @@
             width: 200px; /* Make the image square by setting both width and height */
             height: 200px; /* Adjust the size as needed to make it square */
             border-radius: 50%; /* Create a circular shape for the image */
-            border: 10px solid #C7872A; /* Add a border with the same color as text (10px width) */
+            border: 10px solid #fff; /* Add a pure white border (10px width) */
         }
         .profile-group h2, .profile-group p {
             margin: 0;
@@ -53,13 +56,13 @@
         }
         .nav-menu a {
             text-decoration: none;
-            color: #C7872A; /* Light gray text color for tabs */
+            color: #fff; /* Pure white text color for tabs */
             font-size: 20px; /* Increase text size to 20px */
             display: block;
         }
         .nav-menu a:hover {
             background-color: #ff7f50; /* Change background color to a lighter shade of orange-red on hover */
-            color: #fff; /* Change text color on hover */
+            color: #fff; /* Keep the text color white on hover */
         }
         .content {
             flex: 1;
@@ -98,7 +101,7 @@
         <!-- Profile Group (centered at the top) -->
         <div class="profile-group">
             <!-- Replace 'your_image_path.jpg' with the actual path to your square profile picture -->
-            <img src="docs/assets/images/sadie5.jpg" alt="Your Name's Profile Picture">
+            <img src="docs/assets/images/sadie5" alt="Your Name's Profile Picture">
             <h2>Your Name</h2>
             <p>Web Developer</p>
         </div>
@@ -119,7 +122,7 @@
     <div class="content">
         <div class="content-image">
             <!-- Replace 'your_large_image.gif' with the actual path to your large image or GIF -->
-            <img src="docs/assets/images/temple.PNG" alt="Large GIF">
+            <img src="docs/assets/images/temple" alt="Large GIF">
         </div>
         <div class="content-text">
             <h1>Welcome to My Homepage</h1>
