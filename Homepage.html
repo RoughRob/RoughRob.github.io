@@ -91,6 +91,21 @@
         .section p {
             font-size: 24px; /* Increase text size for section content */
         }
+
+        /* Add this CSS to style the background image */
+        .background-image {
+            background-image: url('docs/assets/images/temple.PNG'); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place the background image behind the content */
+            filter: brightness(0.5); /* Adjust brightness if needed */
+        }
     </style>
 </head>
 <body>
@@ -118,13 +133,12 @@
 
     <!-- Content on the right side (customize as needed) -->
     <div class="content">
-        <!-- Section 1 -->
-		<div class="section" id="home">
-			<!-- Add your large image here -->
-			<img src="docs/assets/images/temple.PNG" alt="Large Image">
-			<h2>Welcome to My Homepage</h2>
-			<p>This is the home section. You can customize the content here.</p>
-		</div>
+        <!-- Section 1 - Home -->
+        <div class="section" id="home">
+            <div class="background-image"></div>
+            <h2>Welcome to My Homepage</h2>
+            <p>This is the home section. You can customize the content here.</p>
+        </div>
         <!-- Section 2 -->
         <div class="section" id="about">
             <h2>About Me</h2>
