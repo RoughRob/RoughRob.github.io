@@ -105,10 +105,12 @@
 		/* Style the picture on the left */
 		.about-picture {
 			flex: 1; /* Takes up half of the space */
-			padding: 0;
-			text-align: center; /* Align the content to the left (image) */
-			border: 1px solid red; /* Add a red border to visualize the section */
+			text-align: center; /* Center-align the content (image) horizontally */
+			display: flex; /* Enable flexbox for vertical centering */
+			flex-direction: column; /* Stack image and text vertically */
+			justify-content: center; /* Center-align content vertically */
 			align-items: center; /* Center-align content horizontally */
+			border: 1px solid red; /* Add a red border to visualize the section */
 		}
 
 		.about-picture img {
