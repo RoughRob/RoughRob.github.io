@@ -182,6 +182,33 @@
             background-position: center;
         }
 		
+				/* Style the project sections within the Portfolio section */
+		.project {
+			margin-bottom: 30px; /* Add space between projects */
+		}
+
+		.project h3 {
+			font-size: 24px; /* Customize title font size */
+			margin: 10px 0; /* Add spacing around the title */
+		}
+
+		.image-gallery {
+			display: flex;
+			justify-content: space-between; /* Arrange images horizontally with space */
+			margin-top: 10px; /* Add space between title and images */
+		}
+
+		.image-gallery img {
+			max-width: 30%; /* Limit image width within gallery */
+			height: auto;
+			margin-right: 10px; /* Add space between images */
+		}
+
+		.project p {
+			font-size: 18px; /* Customize description font size */
+			margin-top: 10px; /* Add space between images and description */
+		}
+		
     </style>
 </head>
 <body>
@@ -218,6 +245,17 @@
         <div class="section" id="portfolio">
             <h2>Portfolio</h2>
             <p>This is the portfolio section. You can showcase your work here.</p>
+			    <!-- Project 1 -->
+			<div class="project">
+				<h3>Project 1 Title</h3>
+				<div class="image-gallery">
+					<!-- Add images for Project 1 here -->
+					<img src="project1-image1.jpg" alt="Project 1 Image 1">
+					<img src="project1-image2.jpg" alt="Project 1 Image 2">
+					<!-- Add more images as needed -->
+				</div>
+				<p>Description for Project 1 goes here.</p>
+			</div>
         </div>
         <!-- Section 4 -->
         <div class="section" id="resume">
