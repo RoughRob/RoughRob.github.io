@@ -238,6 +238,11 @@
 			background-color: #555;
 		}
 		
+		/* Initially hide the full project description */
+		.full-description {
+			display: none;
+		}
+		
     </style>
 </head>
 <body>
@@ -299,6 +304,20 @@
 					</div>
 					<p>Description for Project 1 goes here.</p>
 				</div>
+				    <div class="project-description">
+						<p>This is the first line of the project description.</p>
+						<p>This is the second line of the project description.</p>
+						<p>This is the third line of the project description.</p>
+						<p>This is the fourth line of the project description.</p>
+						<div class="expand-button">
+							<button class="expand-collapse">Read More</button>
+						</div>
+						<div class="full-description">
+							<!-- Full project description goes here -->
+							<p>This is the full project description.This is the full project description.This is the full project description.This is the full project description.This is the full project description.This is the full project description.</p>
+							<!-- You can add more text here -->
+						</div>
+					</div>
         </div>
         <!-- Section 4 -->
         <div class="section" id="resume">
@@ -376,6 +395,24 @@ document.addEventListener("DOMContentLoaded", function () {
     nextBtn.addEventListener("click", () => {
         currentIndex = (currentIndex + 1) % thumbnails.length;
         showImage(currentIndex);
+    });
+});
+// JavaScript code for expand/collapse functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const expandButtons = document.querySelectorAll(".expand-collapse");
+
+    expandButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const description = this.parentNode.nextElementSibling;
+
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+                this.textContent = "Read Less";
+            } else {
+                description.style.display = "none";
+                this.textContent = "Read More";
+            }
+        });
     });
 });
 </script>
