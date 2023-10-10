@@ -242,6 +242,13 @@
 		.full-description {
 			display: none;
 		}
+
+		/* Style the "Read More" button */
+		.toggle-description {
+			cursor: pointer;
+			color: blue; /* You can choose your desired color */
+			text-decoration: underline;
+		}
 		
     </style>
 </head>
@@ -305,17 +312,13 @@
 					<p>Description for Project 1 goes here.</p>
 				</div>
 				    <div class="project-description">
-						<p>This is the first line of the project description.</p>
-						<p>This is the second line of the project description.</p>
-						<p>This is the third line of the project description.</p>
-						<p>This is the fourth line of the project description.</p>
+					        <div class="full-description">
+								<p>
+									This is the full project description. It contains more details about the project.
+									You can add as much text as needed, and only the first few lines will be initially visible.
+								</p>
 						<div class="expand-button">
 							<button class="expand-collapse">Read More</button>
-						</div>
-						<div class="full-description">
-							<!-- Full project description goes here -->
-							<p>This is the full project description.This is the full project description.This is the full project description.This is the full project description.This is the full project description.This is the full project description.</p>
-							<!-- You can add more text here -->
 						</div>
 					</div>
         </div>
@@ -399,9 +402,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // JavaScript code for expand/collapse functionality
 document.addEventListener("DOMContentLoaded", function () {
-    const expandButtons = document.querySelectorAll(".expand-collapse");
+    const toggleButtons = document.querySelectorAll(".toggle-description");
 
-    expandButtons.forEach((button) => {
+    toggleButtons.forEach((button) => {
         button.addEventListener("click", function () {
             const description = this.parentNode.nextElementSibling;
 
