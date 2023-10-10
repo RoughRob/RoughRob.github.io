@@ -251,6 +251,17 @@
 			text-decoration: underline;
 		}
 		
+				/* CSS to style the project video section */
+		.project-video {
+			margin-top: 10px; /* Add margin to separate it from other project content */
+		}
+
+		.project-video video {
+			width: 100%; /* Make the video responsive to its container */
+			max-width: 640px; /* Set a maximum width to control video size */
+			height: auto; /* Maintain the video's aspect ratio */
+		}
+		
     </style>
 </head>
 <body>
@@ -288,7 +299,6 @@
             <h2>Portfolio</h2>
             <p>This is the portfolio section. You can showcase your work here.</p>
 			    <!-- Project 1 -->
-				<!-- Project 1 -->
 				<div class="project">
 					<h3>Project 1 Title</h3>
 					<div class="gallery-container">
@@ -328,7 +338,34 @@
 							</p>
 						</div>
 					</div>
-        </div>
+				<!-- Project 2 -->
+				<div class="project">
+					<h3>Project 2 Title</h3>
+					<div class="project-video">
+						<video width="640" height="360" controls>
+							<source src="docs/assets/images/testvid.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</div>
+				    <div class="project-description">
+						<p>
+						This is the first line of the project description. I can just put whatever I want here and then just add more detail below.
+						</p>
+						<div class="expand-collapse">
+							<button class="toggle-description">Read More</button>
+						</div>
+						<div class="full-description">
+							<p>
+								This is the full project description. It contains more details about the project.
+								You can add as much text as needed, and only the first few lines will be initially visible.
+								This is the full project description. It contains more details about the project.
+								You can add as much text as needed, and only the first few lines will be initially visible.
+								You can add as much text as needed, and only the first few lines will be initially visible.
+							</p>
+						</div>
+					</div>
+		</div>
         <!-- Section 4 -->
         <div class="section" id="resume">
             <h2>Resume</h2>
