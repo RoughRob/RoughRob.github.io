@@ -182,7 +182,7 @@
             background-position: center;
         }
 		
-				/* Style the project sections within the Portfolio section */
+		/* Style the project sections within the Portfolio section */
 		.project {
 			margin-bottom: 30px; /* Add space between projects */
 		}
@@ -192,21 +192,50 @@
 			margin: 10px 0; /* Add spacing around the title */
 		}
 
-		.image-gallery {
+		.gallery-container {
 			display: flex;
-			justify-content: space-between; /* Arrange images horizontally with space */
+			flex-direction: column;
+			align-items: center;
 			margin-top: 10px; /* Add space between title and images */
 		}
 
-		.image-gallery img {
-			max-width: 30%; /* Limit image width within gallery */
-			height: auto;
-			margin-right: 10px; /* Add space between images */
+		.gallery {
+			position: relative;
+			text-align: center;
 		}
 
-		.project p {
-			font-size: 18px; /* Customize description font size */
-			margin-top: 10px; /* Add space between images and description */
+		.main-image {
+			max-width: 100%; /* Ensure the main image fits within its container */
+			height: auto;
+		}
+
+		.image-thumbnails {
+			margin-top: 10px; /* Add space between main image and thumbnails */
+		}
+
+		.image-thumbnails img {
+			max-width: 100px; /* Set a maximum width for thumbnails */
+			height: auto;
+			margin: 0 5px; /* Add space between thumbnails */
+			cursor: pointer; /* Add a pointer cursor for clickable thumbnails */
+		}
+
+		.navigation {
+			margin-top: 10px; /* Add space between thumbnails and navigation buttons */
+		}
+
+		.prev-btn,
+		.next-btn {
+			padding: 5px 10px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+
+		.prev-btn:hover,
+		.next-btn:hover {
+			background-color: #555;
 		}
 		
     </style>
@@ -246,18 +275,26 @@
             <h2>Portfolio</h2>
             <p>This is the portfolio section. You can showcase your work here.</p>
 			    <!-- Project 1 -->
-			<div class="project">
-				<h3>Project 1 Title</h3>
-				<div class="image-gallery">
-					<!-- Add images for Project 1 here -->
-					<img src="docs/assets/images/sadie5.jpg" alt="Project 1 Image 1">
-					<img src="docs/assets/images/sadie5.jpg" alt="Project 1 Image 2">
-					<img src="docs/assets/images/sadie5.jpg" alt="Project 1 Image 3">
-					<img src="docs/assets/images/sadie5.jpg" alt="Project 1 Image 4">
-					<!-- Add more images as needed -->
+				<!-- Project 1 -->
+				<div class="project">
+					<h3>Project 1 Title</h3>
+					<div class="gallery-container">
+						<div class="gallery">
+							<img class="main-image" src="project1-image1.jpg" alt="Project 1 Image 1">
+							<div class="image-thumbnails">
+								<!-- Thumbnails for other images -->
+								<img src="project1-image2.jpg" alt="Thumbnail 2">
+								<img src="project1-image3.jpg" alt="Thumbnail 3">
+								<!-- Add more thumbnails as needed -->
+							</div>
+						</div>
+						<div class="navigation">
+							<button class="prev-btn">Previous</button>
+							<button class="next-btn">Next</button>
+						</div>
+					</div>
+					<p>Description for Project 1 goes here.</p>
 				</div>
-				<p>Description for Project 1 goes here. Description for Project 1 goes here.Description for Project 1 goes here.Description for Project 1 goes here.Description for Project 1 goes here.Description for Project 1 goes here.Description for Project 1 goes here.Description for Project 1 goes here.Description for Project 1 goes here.Description for Project 1 goes here.</p>
-			</div>
         </div>
         <!-- Section 4 -->
         <div class="section" id="resume">
@@ -299,5 +336,44 @@
             <p>This is the contact section. You can provide contact information or a contact form here.</p>
         </div>
     </div>
+	<!-- JavaScript for gallery functionality -->
+<script>
+    // JavaScript code goes here
+	// JavaScript to handle gallery navigation
+document.addEventListener("DOMContentLoaded", function () {
+    const mainImage = document.querySelector(".main-image");
+    const thumbnails = document.querySelectorAll(".image-thumbnails img");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    let currentIndex = 0;
+
+    // Function to show the current image
+    function showImage(index) {
+        mainImage.src = thumbnails[index].src;
+        currentIndex = index;
+    }
+
+    // Show the first image on page load
+    showImage(currentIndex);
+
+    // Handle thumbnail clicks
+    thumbnails.forEach((thumbnail, index) => {
+        thumbnail.addEventListener("click", () => {
+            showImage(index);
+        });
+    });
+
+    // Handle navigation button clicks
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+        showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % thumbnails.length;
+        showImage(currentIndex);
+    });
+});
+</script>
 </body>
 </html>
